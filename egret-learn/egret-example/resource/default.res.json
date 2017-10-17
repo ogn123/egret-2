@@ -1,0 +1,95 @@
+{
+	"groups": [
+		{
+			"keys": "caption_json,description_json,egret_icon_png,bg_jpg,dialog-bg_png,animation_png,ccnn_mp3,posterfullscreen_jpg,posterinline_jpg,firework_png,rock_png,star_png,normalTree_png,bg_png,leaftexiao_png,ballParticle_png,firePot_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"name": "caption_json",
+			"type": "sheet",
+			"url": "assets/caption.json"
+		},
+		{
+			"name": "description_json",
+			"type": "json",
+			"url": "config/description.json"
+		},
+		{
+			"name": "egret_icon_png",
+			"type": "image",
+			"url": "assets/egret_icon.png"
+		},
+		{
+			"name": "bg_jpg",
+			"type": "image",
+			"url": "assets/bg.jpg"
+		},
+		{
+			"name": "dialog-bg_png",
+			"type": "image",
+			"url": "assets/dialog-bg.png"
+		},
+		{
+			"name": "animation_png",
+			"type": "image",
+			"url": "assets/animation.png"
+		},
+		{
+			"name": "ccnn_mp3",
+			"type": "sound",
+			"url": "assets/ccnn.mp3"
+		},
+		{
+			"name": "posterfullscreen_jpg",
+			"type": "image",
+			"url": "assets/posterfullscreen.jpg"
+		},
+		{
+			"name": "posterinline_jpg",
+			"type": "image",
+			"url": "assets/posterinline.jpg"
+		},
+		{
+			"name": "firework_png",
+			"type": "image",
+			"url": "assets/firework.png"
+		},
+		{
+			"name": "rock_png",
+			"type": "image",
+			"url": "assets/rock.png"
+		},
+		{
+			"name": "star_png",
+			"type": "image",
+			"url": "assets/star.png"
+		},
+		{
+			"name": "normalTree_png",
+			"type": "image",
+			"url": "assets/normalTree.png"
+		},
+		{
+			"name": "bg_png",
+			"type": "image",
+			"url": "assets/bg.png"
+		},
+		{
+			"name": "leaftexiao_png",
+			"type": "image",
+			"url": "assets/leaftexiao.png"
+		},
+		{
+			"name": "ballParticle_png",
+			"type": "image",
+			"url": "assets/ballParticle.png"
+		},
+		{
+			"name": "firePot_png",
+			"type": "image",
+			"url": "assets/firePot.png"
+		}
+	]
+}
