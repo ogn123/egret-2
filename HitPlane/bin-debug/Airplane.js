@@ -25,11 +25,12 @@ var fighter;
             _this.fireDelay = fireDelay;
             _this.bmp = new egret.Bitmap(texture);
             _this.addChild(_this.bmp);
+            _this.bmp.pixelHitTest = true;
             _this.fireTimer = new egret.Timer(_this.fireDelay);
             _this.fireTimer.addEventListener(egret.TimerEvent.TIMER, _this.createBullet, _this);
             return _this;
         }
-        /**生产*/
+        /*生产*/
         Airplane.produce = function (textureName, fireDelay) {
             if (fighter.Airplane.cacheDict[textureName] == null)
                 fighter.Airplane.cacheDict[textureName] = [];
@@ -44,7 +45,7 @@ var fighter;
             theFighter.blood = 10;
             return theFighter;
         };
-        /**回收*/
+        /*回收*/
         Airplane.reclaim = function (theFighter, textureName) {
             if (fighter.Airplane.cacheDict[textureName] == null)
                 fighter.Airplane.cacheDict[textureName] = [];
@@ -59,8 +60,8 @@ var fighter;
         };
         /*开火*/
         Airplane.prototype.fire = function () {
+            this.createBullet();
             this.fireTimer.start();
-            // console.log(this.fireTimer);
         };
         /*停火*/
         Airplane.prototype.stopFire = function () {

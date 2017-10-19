@@ -5,7 +5,7 @@ module fighter {
 	export class Airplane extends egret.DisplayObjectContainer {
 
 		private static cacheDict: Object = {};
-		/**生产*/
+		/*生产*/
 		public static produce(textureName: string, fireDelay: number): fighter.Airplane {
 			if (fighter.Airplane.cacheDict[textureName] == null)
 				fighter.Airplane.cacheDict[textureName] = [];
@@ -19,7 +19,7 @@ module fighter {
 			theFighter.blood = 10;
 			return theFighter;
 		}
-		/**回收*/
+		/*回收*/
 		public static reclaim(theFighter: fighter.Airplane, textureName: string): void {
 			if (fighter.Airplane.cacheDict[textureName] == null)
 				fighter.Airplane.cacheDict[textureName] = [];
@@ -35,13 +35,14 @@ module fighter {
 		// 定时发射子弹的定时器
 		private fireTimer: egret.Timer;
 		// 飞机血量
-		private blood: number = 10;
+		public blood: number = 10;
 
 		public constructor(texture: egret.Texture, fireDelay: number) {
 			super();
 			this.fireDelay = fireDelay;
 			this.bmp = new egret.Bitmap(texture);
 			this.addChild(this.bmp);
+			this.bmp.pixelHitTest = true;
 			this.fireTimer = new egret.Timer(this.fireDelay);
 			this.fireTimer.addEventListener(egret.TimerEvent.TIMER, this.createBullet, this);
 		}
@@ -54,8 +55,8 @@ module fighter {
 
 		/*开火*/
 		public fire(): void {
+			this.createBullet();
 			this.fireTimer.start();
-			// console.log(this.fireTimer);
 		}
 
 		/*停火*/

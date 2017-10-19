@@ -1,16 +1,11 @@
 {
 	"groups": [
 		{
-			"keys": "description_json,b1_png,b2_png,bg_jpg,btn_start_png,f1_png,f2_png",
+			"keys": "b1_png,b2_png,bg_jpg,btn_start_png,f1_png,f2_png,description_json,again_png,show_score_box_png,gameover_png",
 			"name": "preload"
 		}
 	],
 	"resources": [
-		{
-			"name": "description_json",
-			"type": "json",
-			"url": "config/description.json"
-		},
 		{
 			"name": "b1_png",
 			"type": "image",
@@ -40,6 +35,26 @@
 			"name": "f2_png",
 			"type": "image",
 			"url": "assets/f2.png"
+		},
+		{
+			"name": "description_json",
+			"type": "json",
+			"url": "config/description.json"
+		},
+		{
+			"name": "again_png",
+			"type": "image",
+			"url": "assets/again.png"
+		},
+		{
+			"name": "show_score_box_png",
+			"type": "image",
+			"url": "assets/show_score_box.png"
+		},
+		{
+			"name": "gameover_png",
+			"type": "image",
+			"url": "assets/gameover.png"
 		}
 	]
 }

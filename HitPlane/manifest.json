@@ -12,7 +12,9 @@
 		"bin-debug/BgMap.js",
 		"bin-debug/Bullet.js",
 		"bin-debug/GameContainer.js",
+		"bin-debug/GameUtil.js",
 		"bin-debug/LoadingUI.js",
-		"bin-debug/Main.js"
+		"bin-debug/Main.js",
+		"bin-debug/ScorePanel.js"
 	]
 }

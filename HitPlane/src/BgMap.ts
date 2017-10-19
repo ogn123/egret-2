@@ -36,7 +36,7 @@ module fighter {
 			for (var i = 0, l = this.rowCount; i < l; i++) {
 				var bgBmp: egret.Bitmap = new egret.Bitmap(RES.getRes('bg_jpg'));
 				bgBmp.y = this.textureHeight * i - (this.textureHeight * this.rowCount - this.stageH);
-				bgBmp.width = this.stageW;
+				// bgBmp.width = this.stageW;
 				this.bmArr.push(bgBmp);
 				this.addChild(bgBmp);
 			}

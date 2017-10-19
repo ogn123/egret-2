@@ -1,8 +1,10 @@
 module fighter {
-
+	/*
+	 * 创建子弹
+	*/
 	export class Bullet extends egret.Bitmap {
 		private static cacheDict: Object = {};
-		/**生产*/
+		/*生产*/
 		public static produce(textureName: string): fighter.Bullet {
 			if (fighter.Bullet.cacheDict[textureName] == null)
 				fighter.Bullet.cacheDict[textureName] = [];
@@ -14,9 +16,10 @@ module fighter {
 				bullet = new fighter.Bullet(RES.getRes(textureName));
 			}
 			bullet.textureName = textureName;
+			bullet.pixelHitTest = true;
 			return bullet;
 		}
-		/**回收*/
+		/*回收*/
 		public static reclaim(bullet: fighter.Bullet, textureName: string): void {
 			if (fighter.Bullet.cacheDict[textureName] == null)
 				fighter.Bullet.cacheDict[textureName] = [];

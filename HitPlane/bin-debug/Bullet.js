@@ -13,12 +13,15 @@ var __extends = (this && this.__extends) || (function () {
 })();
 var fighter;
 (function (fighter) {
+    /*
+     * 创建子弹
+    */
     var Bullet = (function (_super) {
         __extends(Bullet, _super);
         function Bullet(texture) {
             return _super.call(this, texture) || this;
         }
-        /**生产*/
+        /*生产*/
         Bullet.produce = function (textureName) {
             if (fighter.Bullet.cacheDict[textureName] == null)
                 fighter.Bullet.cacheDict[textureName] = [];
@@ -31,9 +34,10 @@ var fighter;
                 bullet = new fighter.Bullet(RES.getRes(textureName));
             }
             bullet.textureName = textureName;
+            bullet.pixelHitTest = true;
             return bullet;
         };
-        /**回收*/
+        /*回收*/
         Bullet.reclaim = function (bullet, textureName) {
             if (fighter.Bullet.cacheDict[textureName] == null)
                 fighter.Bullet.cacheDict[textureName] = [];
