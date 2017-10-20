@@ -1,0 +1,9 @@
+{
+    "useClip": false,
+    "maxImageWidth": 2048,
+    "maxImageHeight": 2048,
+    "defaultResPath": "c:\\Users\\Administrator.USER-20171015DW\\Desktop\\myEgret\\HitPlane\\resource\\default.res.json",
+    "packGroups": {
+        "preload": true
+    }
+}

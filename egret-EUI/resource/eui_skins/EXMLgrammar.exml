@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Group class="app.EXMLgrammar" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<w:Config id="15f38db7787"/>
+	<e:Image id="iconDisplay" source="bg_jpg" x="10" scale9Grid="10, 10, 45, 30"/>
+</e:Group>

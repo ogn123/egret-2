@@ -4,18 +4,15 @@
 		"libs/modules/egret/egret.web.js",
 		"libs/modules/game/game.js",
 		"libs/modules/res/res.js",
+		"libs/modules/eui/eui.js",
 		"libs/modules/tween/tween.js",
+		"libs/modules/socket/socket.js",
 		"promise/bin/promise.js"
 	],
 	"game": [
+		"bin-debug/AssetAdapter.js",
 		"bin-debug/LoadingUI.js",
 		"bin-debug/Main.js",
-		"bin-debug/fighter/Airplane.js",
-		"bin-debug/fighter/BgMap.js",
-		"bin-debug/fighter/BloodStrip.js",
-		"bin-debug/fighter/Bullet.js",
-		"bin-debug/fighter/GameContainer.js",
-		"bin-debug/fighter/ScorePanel.js",
-		"bin-debug/untils/GameUtil.js"
+		"bin-debug/ThemeAdapter.js"
 	]
 }
