@@ -149,7 +149,7 @@ var Main = (function (_super) {
      */
     Main.prototype.startCreateScene = function () {
         // 点击开始游戏按钮
-        this.addChild(new SceneLevels());
+        this.addChild(SceneBegin.Shared());
     };
     return Main;
 }(eui.UILayer));

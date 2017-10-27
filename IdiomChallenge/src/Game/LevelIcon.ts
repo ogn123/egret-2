@@ -1,5 +1,5 @@
 /*绘制图标*/
-class LevelIcon extends eui.Component {
+class LevelIcon extends eui.Button {
   private lb_level: eui.Label;
 
 	public constructor() {

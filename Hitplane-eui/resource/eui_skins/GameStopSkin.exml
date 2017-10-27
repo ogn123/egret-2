@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="GameStopSkin" width="720" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing">
+	<e:Group width="720" height="1136" x="0" y="0">
+		<e:Rect width="720" height="1136" x="0" y="0" fillAlpha="0.5"/>
+		<e:Image source="show_score_box_png" anchorOffsetX="0" width="546.52" anchorOffsetY="0" height="364.39" horizontalCenter="0" verticalCenter="0"/>
+		<e:Image source="gameover_png" x="160.33" y="445.67" anchorOffsetX="0" width="346.67" anchorOffsetY="0" height="52.67"/>
+		<e:Label text="分数" x="260" y="620" textColor="0xcc1c1c" bold="true" italic="true"/>
+		<e:Label id="lb_score" text="100" x="370" y="620" textColor="0xcc1c1c" bold="true" italic="true"/>
+		<e:Label text="杀敌" x="260" y="550" textColor="0xcc1c1c" bold="true" italic="true"/>
+		<e:Label id="lb_enemy" text="100" x="370" y="550" textColor="0xcc1c1c" bold="true" italic="true"/>
+		<e:Button id="btn_again" label="" y="668" horizontalCenter="-26">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="again_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+</e:Skin>

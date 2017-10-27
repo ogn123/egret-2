@@ -33,6 +33,6 @@ var LevelIcon = (function (_super) {
         configurable: true
     });
     return LevelIcon;
-}(eui.Component));
+}(eui.Button));
 __reflect(LevelIcon.prototype, "LevelIcon");
 //# sourceMappingURL=LevelIcon.js.map

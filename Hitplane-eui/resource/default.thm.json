@@ -1,0 +1,8 @@
+{
+  "autoGenerateExmlsList": true,
+  "exmls": [
+    "resource/eui_skins/GameStopSkin.exml",
+    "resource/eui_skins/SceneGameSkin.exml",
+    "resource/eui_skins/StartGameSkin.exml"
+  ]
+}

@@ -43,6 +43,8 @@ var LoadingUI = (function (_super) {
     __extends(LoadingUI, _super);
     function LoadingUI() {
         var _this = _super.call(this) || this;
+        // 预先加载声音
+        SoundMenager.Shared();
         _this.createView();
         return _this;
     }

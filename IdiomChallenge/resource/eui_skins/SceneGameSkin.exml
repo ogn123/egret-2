@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<e:Skin class="SceneGameSkin" width="720" height="1136" xmlns:e="http://ns.egret.com/eui" xmlns:w="http://ns.egret.com/wing" xmlns:ns1="*">
+	<e:Image source="GameBG3_jpg" x="0" y="0" locked="true"/>
+	<e:Image source="WordFrame_png" y="124" horizontalCenter="0" locked="true"/>
+	<e:Button id="btn_back" label="" x="15" y="10" locked="true">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="BackBtn_png" source.down="BackBtn1_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Group id="group_words" width="552" height="348" x="84" y="630" anchorOffsetX="0" anchorOffsetY="0" locked="true">
+		<ns1:word width="80" height="80" x="0" y="24" skinName="wordSkin" anchorOffsetX="0" anchorOffsetY="0"/>
+		<ns1:word width="80" height="80" x="10" y="34" skinName="wordSkin" anchorOffsetX="0" anchorOffsetY="0"/>
+		<ns1:word width="80" height="80" x="20" y="44" skinName="wordSkin" anchorOffsetX="0" anchorOffsetY="0"/>
+		<ns1:word width="80" height="80" x="30" y="54" skinName="wordSkin" anchorOffsetX="0" anchorOffsetY="0"/>
+		<ns1:word width="80" height="80" x="40" y="64" skinName="wordSkin" anchorOffsetX="0" anchorOffsetY="0"/>
+		<ns1:word width="80" height="80" x="50" y="74" skinName="wordSkin" anchorOffsetX="0" anchorOffsetY="0"/>
+		<ns1:word width="80" height="80" x="60" y="84" skinName="wordSkin" anchorOffsetX="0" anchorOffsetY="0"/>
+		<ns1:word width="80" height="80" x="70" y="94" skinName="wordSkin" anchorOffsetX="0" anchorOffsetY="0"/>
+		<ns1:word width="80" height="80" x="80" y="104" skinName="wordSkin" anchorOffsetX="0" anchorOffsetY="0"/>
+		<ns1:word width="80" height="80" x="90" y="114" skinName="wordSkin" anchorOffsetX="0" anchorOffsetY="0"/>
+		<ns1:word width="80" height="80" x="100" y="124" skinName="wordSkin" anchorOffsetX="0" anchorOffsetY="0"/>
+		<ns1:word width="80" height="80" x="110" y="134" skinName="wordSkin" anchorOffsetX="0" anchorOffsetY="0"/>
+		<ns1:word width="80" height="80" x="120" y="144" skinName="wordSkin" anchorOffsetX="0" anchorOffsetY="0"/>
+		<ns1:word width="80" height="80" x="130" y="154" skinName="wordSkin" anchorOffsetX="0" anchorOffsetY="0"/>
+		<ns1:word width="80" height="80" x="140" y="164" skinName="wordSkin" anchorOffsetX="0" anchorOffsetY="0"/>
+		<ns1:word width="80" height="80" x="348" y="106" skinName="wordSkin"/>
+		<ns1:word width="80" height="80" x="142" y="114" skinName="wordSkin"/>
+		<ns1:word width="80" height="80" x="152" y="124" skinName="wordSkin"/>
+		<ns1:word width="80" height="80" x="162" y="134" skinName="wordSkin"/>
+		<ns1:word width="80" height="80" x="172" y="144" skinName="wordSkin"/>
+		<e:layout>
+			<e:TileLayout rowAlign="justifyUsingHeight" columnAlign="justifyUsingGap" orientation="rows"/>
+		</e:layout>
+	</e:Group>
+	<e:Group id="group_answer" width="374" height="82" x="176" y="472" anchorOffsetX="0" anchorOffsetY="0" locked="true">
+		<ns1:AnswerWord width="80" height="80" x="-6" y="2" skinName="wordSkin"/>
+		<ns1:AnswerWord width="80" height="80" x="98" y="18" skinName="wordSkin"/>
+		<ns1:AnswerWord width="80" height="80" x="104" y="8" skinName="wordSkin"/>
+		<ns1:AnswerWord width="80" height="80" x="228" y="472" skinName="wordSkin"/>
+		<e:layout>
+			<e:HorizontalLayout horizontalAlign="justify"/>
+		</e:layout>
+	</e:Group>
+	<e:Image id="img_question" width="390" height="260" y="176" horizontalCenter="0" locked="true"/>
+	<e:Button id="btn_set" label="设置" x="540" y="20" width="160" height="50">
+		<e:skinName>
+		<e:Skin states="up,down,disabled">
+			<e:Image width="100%" height="100%" source="MoneyBG_png"/>
+			<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+		</e:Skin>
+		</e:skinName>
+	</e:Button>
+	<e:Group id="group_win" width="720" height="1136" anchorOffsetX="0" anchorOffsetY="0" horizontalCenter="0" top="0" locked="true">
+		<e:Rect width="720" height="1136" x="0" y="0" fillColor="0x0c0202" fillAlpha="0.5"/>
+		<e:Image source="Result_png" horizontalCenter="0" bottom="50"/>
+		<e:Label id="explain_text" text="解释" x="125" y="725" textColor="0x070000" anchorOffsetX="0" anchorOffsetY="0" multiline="true" maxWidth="500"/>
+		<e:Label id="source_text" text="出处" x="125" y="840" textColor="0x070000" maxWidth="500" multiline="true"/>
+		<e:Button id="btn_next" label="" x="447" y="960">
+			<e:skinName>
+				<e:Skin states="up,down,disabled">
+				<e:Image width="100%" height="100%" source="ResultBtn_png" source.down="ResultBtn1_png"/>
+				<e:Label id="labelDisplay" horizontalCenter="0" verticalCenter="0"/>
+				</e:Skin>
+			</e:skinName>
+		</e:Button>
+	</e:Group>
+</e:Skin>

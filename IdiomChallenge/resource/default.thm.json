@@ -8,7 +8,6 @@
     "eui.TextInput": "resource/eui_skins/TextInputSkin.exml",
     "eui.ProgressBar": "resource/eui_skins/ProgressBarSkin.exml",
     "eui.RadioButton": "resource/eui_skins/RadioButtonSkin.exml",
-    "eui.Scroller": "resource/eui_skins/ScrollerSkin.exml",
     "eui.ToggleSwitch": "resource/eui_skins/ToggleSwitchSkin.exml",
     "eui.VScrollBar": "resource/eui_skins/VScrollBarSkin.exml",
     "eui.VSlider": "resource/eui_skins/VSliderSkin.exml",
@@ -16,9 +15,11 @@
   },
   "autoGenerateExmlsList": true,
   "exmls": [
+    "resource/eui_skins/GameSettingSkin.exml",
     "resource/eui_skins/LevelIconSkin.exml",
     "resource/eui_skins/SceneBeginSkin.exml",
-    "resource/eui_skins/SceneLevelsSkin.exml",
-    "resource/eui_skins/ScrollerSkin.exml"
+    "resource/eui_skins/wordSkin.exml",
+    "resource/eui_skins/SceneGameSkin.exml",
+    "resource/eui_skins/SceneLevelsSkin.exml"
   ]
 }

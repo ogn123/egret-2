@@ -142,6 +142,6 @@ class Main extends eui.UILayer {
 	 */
 	protected startCreateScene(): void {
 		// 点击开始游戏按钮
-		this.addChild(new SceneLevels());
+		this.addChild(SceneBegin.Shared());
 	}
 }

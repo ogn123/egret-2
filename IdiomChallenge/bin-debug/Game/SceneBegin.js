@@ -20,15 +20,31 @@ var SceneBegin = (function (_super) {
         _this.skinName = 'resource/eui_skins/SceneBeginSkin.exml';
         return _this;
     }
+    SceneBegin.Shared = function () {
+        if (SceneBegin.shared == null) {
+            SceneBegin.shared = new SceneBegin();
+        }
+        return SceneBegin.shared;
+    };
     SceneBegin.prototype.createChildren = function () {
         _super.prototype.createChildren.call(this);
     };
     SceneBegin.prototype.onComplete = function () {
+        // 开启播放背景音乐
+        SoundMenager.Shared().PlayBGM();
         this.btn_begin.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBegin, this);
+        // 设置
+        this.btn_set.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBtnSet, this);
     };
     SceneBegin.prototype.onBegin = function () {
+        SoundMenager.Shared().PlayClick();
         // 进入关卡界面
-        this.addChild(new SceneLevels());
+        this.parent.addChild(SceneLevels.Shared());
+        this.parent.removeChild(this);
+    };
+    // 设置
+    SceneBegin.prototype.onBtnSet = function () {
+        this.parent.addChild(GameSetting.Shared());
     };
     return SceneBegin;
 }(eui.Component));

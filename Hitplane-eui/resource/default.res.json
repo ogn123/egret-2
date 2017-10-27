@@ -1,0 +1,75 @@
+{
+	"groups": [
+		{
+			"keys": "description_json,bg_jpg,btn_start_png,f1_png,f2_png,gameover_png,show_score_box_png,again_png,b1_png,b2_png,GameBG1_jpg,start_menu_png,shezhi2_cover_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"name": "description_json",
+			"type": "json",
+			"url": "config/description.json"
+		},
+		{
+			"name": "bg_jpg",
+			"type": "image",
+			"url": "assets/res/bg.jpg"
+		},
+		{
+			"name": "btn_start_png",
+			"type": "image",
+			"url": "assets/res/btn_start.png"
+		},
+		{
+			"name": "f1_png",
+			"type": "image",
+			"url": "assets/res/f1.png"
+		},
+		{
+			"name": "f2_png",
+			"type": "image",
+			"url": "assets/res/f2.png"
+		},
+		{
+			"name": "gameover_png",
+			"type": "image",
+			"url": "assets/res/gameover.png"
+		},
+		{
+			"name": "show_score_box_png",
+			"type": "image",
+			"url": "assets/res/show_score_box.png"
+		},
+		{
+			"name": "again_png",
+			"type": "image",
+			"url": "assets/res/again.png"
+		},
+		{
+			"name": "b1_png",
+			"type": "image",
+			"url": "assets/res/b1.png"
+		},
+		{
+			"name": "b2_png",
+			"type": "image",
+			"url": "assets/res/b2.png"
+		},
+		{
+			"name": "GameBG1_jpg",
+			"type": "image",
+			"url": "assets/res/GameBG1.jpg"
+		},
+		{
+			"name": "start_menu_png",
+			"type": "image",
+			"url": "assets/res/start_menu.png"
+		},
+		{
+			"name": "shezhi2_cover_png",
+			"type": "image",
+			"url": "assets/res/shezhi2_cover.png"
+		}
+	]
+}
