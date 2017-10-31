@@ -34,6 +34,7 @@ class StartGame extends eui.Component {
 	// 开始游戏
 	private onBtnStart(): void {
 		this.parent.addChild(SceneGame.Shared());
+		SceneGame.Shared().initGame();
 		this.parent.removeChild(this);
 	}
 }

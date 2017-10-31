@@ -11,37 +11,28 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-/*
- * 开始游戏界面
-*/
-var StartGame = (function (_super) {
-    __extends(StartGame, _super);
-    function StartGame() {
+// 设置界面
+var SetGame = (function (_super) {
+    __extends(SetGame, _super);
+    function SetGame() {
         var _this = _super.call(this) || this;
         _this.addEventListener(eui.UIEvent.COMPLETE, _this.onComplete, _this);
-        _this.skinName = 'resource/eui_skins/StartGameSkin.exml';
+        _this.skinName = 'resource/eui_skins/SetGameSkin.exml';
         return _this;
     }
-    StartGame.Shared = function () {
-        if (StartGame.shared == null) {
-            StartGame.shared = new StartGame();
+    SetGame.Shared = function () {
+        if (SetGame.shared == null) {
+            SetGame.shared = new SetGame();
         }
-        return StartGame.shared;
+        return SetGame.shared;
     };
-    StartGame.prototype.createChildren = function () {
+    SetGame.prototype.createChildren = function () {
         _super.prototype.createChildren.call(this);
     };
-    StartGame.prototype.onComplete = function () {
-        // 监听开始游戏按钮
-        this.btn_start.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBtnStart, this);
+    SetGame.prototype.onComplete = function () {
+        egret.log('SetGame');
     };
-    // 开始游戏
-    StartGame.prototype.onBtnStart = function () {
-        this.parent.addChild(SceneGame.Shared());
-        SceneGame.Shared().initGame();
-        this.parent.removeChild(this);
-    };
-    return StartGame;
+    return SetGame;
 }(eui.Component));
-__reflect(StartGame.prototype, "StartGame");
-//# sourceMappingURL=StartGame.js.map
+__reflect(SetGame.prototype, "SetGame");
+//# sourceMappingURL=SetGame.js.map

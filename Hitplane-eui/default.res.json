@@ -1,0 +1,120 @@
+{
+	"groups": [
+		{
+			"keys": "description_json,btn_disable_png,btn_music_down_png,btn_music_png,btn_sound_down_png,btn_start_png,f1_png,f2_png,btn_sound_png,GameBG1_jpg,shezhi2_cover_png,show_score_box_png,start_menu_png,zhuye1_cover_png,zhuye2_cover_png,again_png,b1_png,b2_png,BackBtn_png,BackBtn1_png,bg_jpg,gameover_png",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "assets/res/btn_disable.png",
+			"type": "image",
+			"name": "btn_disable_png"
+		},
+		{
+			"url": "assets/res/btn_music_down.png",
+			"type": "image",
+			"name": "btn_music_down_png"
+		},
+		{
+			"url": "assets/res/btn_music.png",
+			"type": "image",
+			"name": "btn_music_png"
+		},
+		{
+			"url": "assets/res/btn_sound_down.png",
+			"type": "image",
+			"name": "btn_sound_down_png"
+		},
+		{
+			"url": "assets/res/btn_start.png",
+			"type": "image",
+			"name": "btn_start_png"
+		},
+		{
+			"url": "assets/res/f1.png",
+			"type": "image",
+			"name": "f1_png"
+		},
+		{
+			"url": "assets/res/f2.png",
+			"type": "image",
+			"name": "f2_png"
+		},
+		{
+			"url": "assets/res/btn_sound.png",
+			"type": "image",
+			"name": "btn_sound_png"
+		},
+		{
+			"url": "assets/res/GameBG1.jpg",
+			"type": "image",
+			"name": "GameBG1_jpg"
+		},
+		{
+			"url": "assets/res/shezhi2_cover.png",
+			"type": "image",
+			"name": "shezhi2_cover_png"
+		},
+		{
+			"url": "assets/res/show_score_box.png",
+			"type": "image",
+			"name": "show_score_box_png"
+		},
+		{
+			"url": "assets/res/start_menu.png",
+			"type": "image",
+			"name": "start_menu_png"
+		},
+		{
+			"url": "assets/res/zhuye1_cover.png",
+			"type": "image",
+			"name": "zhuye1_cover_png"
+		},
+		{
+			"url": "assets/res/zhuye2_cover.png",
+			"type": "image",
+			"name": "zhuye2_cover_png"
+		},
+		{
+			"url": "assets/res/again.png",
+			"type": "image",
+			"name": "again_png"
+		},
+		{
+			"url": "assets/res/b1.png",
+			"type": "image",
+			"name": "b1_png"
+		},
+		{
+			"url": "assets/res/b2.png",
+			"type": "image",
+			"name": "b2_png"
+		},
+		{
+			"url": "assets/res/BackBtn.png",
+			"type": "image",
+			"name": "BackBtn_png"
+		},
+		{
+			"url": "assets/res/BackBtn1.png",
+			"type": "image",
+			"name": "BackBtn1_png"
+		},
+		{
+			"url": "assets/res/bg.jpg",
+			"type": "image",
+			"name": "bg_jpg"
+		},
+		{
+			"url": "assets/res/gameover.png",
+			"type": "image",
+			"name": "gameover_png"
+		}
+	]
+}

@@ -23,6 +23,8 @@ class SceneGame extends eui.Component {
 
 	// 设置
 	private btn_set: eui.Button;
+	// 返回
+	private btn_back: eui.Button;
 	// 背景容器
 	private group_bg: eui.Group;
 	/*滚动背景*/
@@ -35,7 +37,7 @@ class SceneGame extends eui.Component {
 	private myBullets: fighter.Bullet[] = [];
 	/*我的子弹的攻击力*/
 	private myBulletAgg: number = 2;
-	/*我的血量*/
+	/*我的飞机血量*/
 	private myBlood: number = 10;
 	/*我的飞机的血条*/
 	private myFighterBlood: fighter.BloodStrip;
@@ -48,9 +50,9 @@ class SceneGame extends eui.Component {
 	/*敌人子弹的攻击力*/
 	private enemyBulletAgg: number = 1;
 	/*敌人发射子弹的速度*/
-	private enemyCreateBulletTime: number = 2000;
+	private enemyCreateBulletTime: number = 5000;
 	/*创建敌机的速度*/
-	private enemyFightersTimer: egret.Timer = new egret.Timer(1500);
+	private enemyFightersTimer: egret.Timer = new egret.Timer(2000);
 	// 控制子弹在我的飞机的左侧还是右侧
 	private isLOrR: boolean = true;
 	/*速度基数*/
@@ -59,19 +61,31 @@ class SceneGame extends eui.Component {
 	private lastTime: number = egret.getTimer();
 	/*我的分数*/
 	private myScore: number;
-	/*显示分数*/
-	private showScore: fighter.ScorePanel;
+	/*杀敌数*/
+	private myKills: number;
 
 	private onComplete(): void {
-		this.initGame();
+		
 	}
 
 	// 初始化游戏界面
 	public initGame(): void {
+		console.log(this.myBullets);
+		console.log(this.enemyBullets);
+		console.log(this.enemyFighters);
+		console.log(this.hasEventListener('ENTER_FRAME'));
+		// 监听返回
+		this.btn_back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBtnBack, this);
+		// 监听设置
+		this.btn_set.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBtnSet, this);
+
+		// 初始化分数和杀敌数
+		this.myScore = 0;
+		this.myKills = 0;
 		// 移除我的飞机
-		// if (this.myFighter.parent) {
-		// 	this.removeChild(this.myFighter);
-		// }
+		if (this.contains(this.myFighter)) {
+			this.removeChild(this.myFighter);
+		}
 		// 创建可滚动的背景
 		this.bg = new fighter.BgMap();
 		this.group_bg.addChild(this.bg);
@@ -82,22 +96,18 @@ class SceneGame extends eui.Component {
 		this.addChild(this.myFighter);
 		this.myFighter.x = (this.width - this.myFighter.width) / 2;
 		this.myFighter.y = this.height - this.myFighter.height - 50;
-		// 初始化我的飞机的血量
-		if (this.myFighter.blood <= 0) {
-			this.myFighter.blood = this.myBlood;
-		}
 		// 创建我的飞机的血条
-		this.myFighterBlood = new fighter.BloodStrip(300, 20, 10);
+		this.myFighterBlood = new fighter.BloodStrip(300, 20, this.myBlood);
 		this.myFighterBlood.x = 20;
 		this.myFighterBlood.y = this.height - this.myFighterBlood.height - 10;
 		this.addChild(this.myFighterBlood);
-		// 我的飞机开火
-		this.myFighter.fire();
 		// 创建我的子弹
 		this.myFighter.addEventListener('createBullet', this.createBulletHandle, this);
 		// 创建敌机
 		this.enemyFightersTimer.addEventListener(egret.TimerEvent.TIMER, this.createEnemyFighter, this);
 		this.enemyFightersTimer.start();
+		// 我的飞机开火
+		this.myFighter.fire();
 		// 让飞机和子弹运动起来
 		this.addEventListener(egret.Event.ENTER_FRAME, this.enterFrameHandle, this);
 		// 我的飞机动
@@ -109,12 +119,12 @@ class SceneGame extends eui.Component {
 		var enemyFighter: fighter.Airplane = fighter.Airplane.produce("f2_png", this.enemyCreateBulletTime, this.enemyBlood);
 		enemyFighter.x = Math.random() * (this.width - enemyFighter.width);
 		enemyFighter.y = -enemyFighter.height;
+		// 创建敌人的子弹
+		enemyFighter.addEventListener('createBullet', this.createBulletHandle, this);
 		// 敌机开火
 		enemyFighter.fire();
 		this.addChildAt(enemyFighter, this.numChildren - 1);
 		this.enemyFighters.push(enemyFighter);
-		// 创建敌人的子弹
-		enemyFighter.addEventListener('createBullet', this.createBulletHandle, this);
 	}
 
 	// 创建子弹
@@ -213,6 +223,7 @@ class SceneGame extends eui.Component {
 						delFighters.push(enemyFighte);
 						// 分数加一
 						this.myScore++;
+						this.myKills++;
 					}
 				}
 			}
@@ -241,8 +252,8 @@ class SceneGame extends eui.Component {
 		if (this.myFighter.blood <= 0) {
 			// 游戏结束
 			this.parent.addChild(GameStop.Shared());
+			GameStop.Shared().showScore(this.myScore, this.myKills);
 			this.gameStop();
-			// this.parent.removeChild(this);
 		} else {
 			// 将需要消失的子弹和飞机回收
 			while (delButtles.length > 0) {
@@ -274,8 +285,8 @@ class SceneGame extends eui.Component {
 		this.myFighter.removeEventListener("createBullet", this.createBulletHandle, this);
 		this.removeEventListener(egret.Event.ENTER_FRAME, this.enterFrameHandle, this);
 		this.removeEventListener(egret.TouchEvent.TOUCH_MOVE, this.myFighterMove, this);
-		this.enemyFightersTimer.removeEventListener(egret.TimerEvent.TIMER, this.createEnemyFighter, this);
 		this.enemyFightersTimer.stop();
+		this.enemyFightersTimer.removeEventListener(egret.TimerEvent.TIMER, this.createEnemyFighter, this);
 		// 我的飞机停火
 		this.myFighter.stopFire();
 		// 敌机停火
@@ -309,9 +320,18 @@ class SceneGame extends eui.Component {
 		}
 	}
 
-	// 开始游戏
-	// private gameStart(): void {
-	// 	// 初始化血条
-	// 	this.myFighterBlood.reduceBlood(this.myFighter.blood);
-	// }
+	// 设置
+	private onBtnSet(): void {
+		this.btn_set.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBtnSet, this);
+		this.initGame();
+	}
+
+	// 返回
+	private onBtnBack(): void {
+		this.btn_back.removeEventListener(egret.TouchEvent.TOUCH_TAP, this.onBtnBack, this);
+		this.myFighter.blood = 0;
+		this.gameStop();
+		// this.parent.addChild(StartGame.Shared());
+		// this.parent.removeChild(this);
+	}
 }

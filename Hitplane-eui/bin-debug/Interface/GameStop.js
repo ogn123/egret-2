@@ -31,15 +31,28 @@ var GameStop = (function (_super) {
     GameStop.prototype.createChildren = function () {
         _super.prototype.createChildren.call(this);
     };
-    GameStop.prototype.onComplete = function () {
+    GameStop.prototype.onComplete = function (e) {
         // 监听再来一次按钮
         this.btn_again.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBtnAgain, this);
+        // 监听返回主页按钮
+        this.btn_back.addEventListener(egret.TouchEvent.TOUCH_TAP, this.onBtnBack, this);
+    };
+    // 显示分数和杀敌数
+    GameStop.prototype.showScore = function (score, kills) {
+        this.lb_score.text = score.toString();
+        this.lb_enemy.text = kills.toString();
     };
     // 再来一次
     GameStop.prototype.onBtnAgain = function () {
         this.parent.removeChild(this);
         // 初始化游戏界面
         SceneGame.Shared().initGame();
+    };
+    // 返回主页
+    GameStop.prototype.onBtnBack = function () {
+        this.parent.addChild(StartGame.Shared());
+        this.parent.removeChild(SceneGame.Shared());
+        this.parent.removeChild(this);
     };
     return GameStop;
 }(eui.Component));

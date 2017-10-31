@@ -1,20 +1,59 @@
 {
-	"groups": [
-		{
-			"keys": "description_json,bg_jpg,btn_start_png,f1_png,f2_png,gameover_png,show_score_box_png,again_png,b1_png,b2_png,GameBG1_jpg,start_menu_png,shezhi2_cover_png",
-			"name": "preload"
-		}
-	],
 	"resources": [
 		{
-			"name": "description_json",
-			"type": "json",
-			"url": "config/description.json"
+			"name": "again_png",
+			"type": "image",
+			"url": "assets/res/again.png"
+		},
+		{
+			"name": "b1_png",
+			"type": "image",
+			"url": "assets/res/b1.png"
+		},
+		{
+			"name": "b2_png",
+			"type": "image",
+			"url": "assets/res/b2.png"
+		},
+		{
+			"name": "BackBtn_png",
+			"type": "image",
+			"url": "assets/res/BackBtn.png"
+		},
+		{
+			"name": "BackBtn1_png",
+			"type": "image",
+			"url": "assets/res/BackBtn1.png"
 		},
 		{
 			"name": "bg_jpg",
 			"type": "image",
 			"url": "assets/res/bg.jpg"
+		},
+		{
+			"name": "btn_disable_png",
+			"type": "image",
+			"url": "assets/res/btn_disable.png"
+		},
+		{
+			"name": "btn_music_png",
+			"type": "image",
+			"url": "assets/res/btn_music.png"
+		},
+		{
+			"name": "btn_music_down_png",
+			"type": "image",
+			"url": "assets/res/btn_music_down.png"
+		},
+		{
+			"name": "btn_sound_png",
+			"type": "image",
+			"url": "assets/res/btn_sound.png"
+		},
+		{
+			"name": "btn_sound_down_png",
+			"type": "image",
+			"url": "assets/res/btn_sound_down.png"
 		},
 		{
 			"name": "btn_start_png",
@@ -32,9 +71,19 @@
 			"url": "assets/res/f2.png"
 		},
 		{
+			"name": "GameBG1_jpg",
+			"type": "image",
+			"url": "assets/res/GameBG1.jpg"
+		},
+		{
 			"name": "gameover_png",
 			"type": "image",
 			"url": "assets/res/gameover.png"
+		},
+		{
+			"name": "shezhi2_cover_png",
+			"type": "image",
+			"url": "assets/res/shezhi2_cover.png"
 		},
 		{
 			"name": "show_score_box_png",
@@ -42,34 +91,25 @@
 			"url": "assets/res/show_score_box.png"
 		},
 		{
-			"name": "again_png",
-			"type": "image",
-			"url": "assets/res/again.png"
-		},
-		{
-			"name": "b1_png",
-			"type": "image",
-			"url": "assets/res/b1.png"
-		},
-		{
-			"name": "b2_png",
-			"type": "image",
-			"url": "assets/res/b2.png"
-		},
-		{
-			"name": "GameBG1_jpg",
-			"type": "image",
-			"url": "assets/res/GameBG1.jpg"
-		},
-		{
 			"name": "start_menu_png",
 			"type": "image",
 			"url": "assets/res/start_menu.png"
 		},
 		{
-			"name": "shezhi2_cover_png",
+			"name": "zhuye1_cover_png",
 			"type": "image",
-			"url": "assets/res/shezhi2_cover.png"
+			"url": "assets/res/zhuye1_cover.png"
+		},
+		{
+			"name": "zhuye2_cover_png",
+			"type": "image",
+			"url": "assets/res/zhuye2_cover.png"
+		}
+	],
+	"groups": [
+		{
+			"name": "preload",
+			"keys": "again_png,b1_png,b2_png,BackBtn_png,BackBtn1_png,bg_jpg,btn_disable_png,btn_music_png,btn_music_down_png,btn_sound_png,btn_sound_down_png,btn_start_png,f1_png,f2_png,GameBG1_jpg,gameover_png,shezhi2_cover_png,show_score_box_png,start_menu_png,zhuye1_cover_png,zhuye2_cover_png"
 		}
 	]
 }
